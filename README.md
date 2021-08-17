@@ -1,4 +1,4 @@
-18 Aug: <Vikas> please put your concerns here. I will check as soon as i see text here.  
+18 Aug: <> please put your concerns here. I will check as soon as i see text here.  
 18 Aug :<sthita> please run fetchmulti.sh in your environment and check the output.Please use the cmd mentioned in usage.  
 18 Aug :<sthita> Added fetchmulti.sh file to demonstrate multiple nodes.Edited fetchadminlog.sh which are now working fine in playground.  
 
