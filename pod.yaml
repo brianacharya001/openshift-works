@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Pod
+metadata:
+name: bucket-example
+spec:
+  containers:
+    - image: myimage
+      env:
+        - name: AWS_CA_BUNDLE
+          value: /run/secrets/kubernetes.io/serviceaccount/service-ca.crt
+        - name: Hostname
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: BUCKET_HOST
+        - name: Bucketname
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: BUCKET_NAME
+        - name: Bucketport
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: BUCKET_PORT   
+        - name: Bucketregion
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: BUCKET_REGION  
+        - name: Bucketsubregion
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: BUCKET_REGION 
+        - name: Accessid
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: AWS_ACCESS_KEY_ID 
+        - name: Accesskey
+          valueFrom:
+            configMapKeyRef:
+              name: dimension-object-bucket
+              key: AWS_SECRET_ACCESS_KEY                        
