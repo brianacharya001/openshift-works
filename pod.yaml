@@ -38,11 +38,11 @@ spec:
             key: BUCKET_REGION 
       - name: Accessid
         valueFrom:
-          configMapKeyRef:
+          secretKeyRef:
             name: dimension-object-bucket
             key: AWS_ACCESS_KEY_ID 
       - name: Accesskey
         valueFrom:
-          configMapKeyRef:
+          secretKeyRef:
             name: dimension-object-bucket
             key: AWS_SECRET_ACCESS_KEY  
